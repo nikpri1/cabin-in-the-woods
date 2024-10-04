@@ -1,3 +1,3 @@
 # The Wild Oasis
 
-My Wild oasis project
+My Wild oasis project.
