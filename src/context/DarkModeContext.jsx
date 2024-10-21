@@ -8,11 +8,7 @@ function DarkModeProvider({ children }) {
     window.matchMedia("(prefers-color-scheme: dark)").matches,
     "isDarkMode"
   );
-
-  function toggleDarkMode() {
-    setIsDarkMode((isDark) => !isDark);
-  }
-
+  console.log(isDarkMode);
   useEffect(
     function () {
       if (isDarkMode) {
@@ -25,7 +21,9 @@ function DarkModeProvider({ children }) {
     },
     [isDarkMode]
   );
-
+  function toggleDarkMode() {
+    setIsDarkMode((isDark) => !isDark);
+  }
   return (
     <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
       {children}

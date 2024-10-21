@@ -128,12 +128,18 @@ function Uploader() {
   // }
 
   useEffect(function () {
-    const uploaderInterval = setInterval(() => {
-      uploadAll();
-    }, DAY_MILLISECONDS);
+    const uploaderInterval = setInterval(uploadAll, DAY_MILLISECONDS);
 
     return () => clearInterval(uploaderInterval);
   }, []);
+
+  // useEffect(function () {
+  //   const uploaderInterval = setInterval(() => {
+  //     uploadAll();
+  //   }, DAY_MILLISECONDS);
+
+  //   return () => clearInterval(uploaderInterval);
+  // }, []);
 
   return null;
 }
