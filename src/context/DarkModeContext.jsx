@@ -8,7 +8,6 @@ function DarkModeProvider({ children }) {
     window.matchMedia("(prefers-color-scheme: dark)").matches,
     "isDarkMode"
   );
-  console.log(isDarkMode);
   useEffect(
     function () {
       if (isDarkMode) {
